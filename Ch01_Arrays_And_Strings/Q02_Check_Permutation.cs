@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Core;
 
 namespace Ch_01.Arrays_and_Strings
@@ -29,7 +30,7 @@ namespace Ch_01.Arrays_and_Strings
 
             foreach (char c in target)
             {
-                if (charMap[c]-- < 0)
+                if (--charMap[c] < 0)
                     return false;
             }
 
@@ -39,7 +40,16 @@ namespace Ch_01.Arrays_and_Strings
 
         public void Run()
         {
-            
+            string[] source = new[] { "abc", "xyz", "car", "apple", "kite" };
+            string[] target = new[] { "bca", "zyz", "scotter", "mpple", "kite" };
+
+            for (int i = 0; i < source.Length; i++)
+            {
+                var s = source[i];
+                var t = target[i];
+                Console.WriteLine($"CheckPermutation: source: {s}, target: {t} : {CheckPermutation(s,t)}");
+                Console.WriteLine($"CheckPermutation2: source: {s}, target: {t} : {CheckPermutation2(s, t)}");
+            }
         }
     }
 }

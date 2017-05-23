@@ -43,6 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Q01_Is_Unique.cs" />
     <Compile Include="Q02_Check_Permutation.cs" />
+    <Compile Include="Q03_URLify.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Solutions\Core\Core.csproj">
